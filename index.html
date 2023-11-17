@@ -7,43 +7,47 @@
     <link rel="stylesheet" href="calc.css">
 </head>
 <body>
-    <div class="mainbody">
+    <div class="mainbody" id="calbody">
         <section class="textSec">
             <input type="text" id="result" maxlength="15">
         </section>
         <section class="buttonSec">
             <div class="buttondiv1">
-                <button style="color: rgb(151, 93, 250);">CE</button>
-                <button>C</button>
-                <button>%</button>
-                <button class="spcbtn">÷</button>
+                <button style="color: rgb(151, 93, 250);" onclick="cler()">CE</button>
+                <button onclick="c()">C</button>
+                <button onclick="display('%')" onkeydown="myFunction(event)">%</button>
+                <button class="spcbtn" onclick="display('/')" onkeydown="myFunction(event)">/</button>
             </div>
             <div class="buttondiv1">
-                <button>7</button>
-                <button>8</button>
-                <button>9</button>
-                <button class="spcbtn">x</button>
+                <button onclick="display('7')" onkeydown="myFunction(event)">7</button>
+                <button onclick="display('8')" onkeydown="myFunction(event)">8</button>
+                <button onclick="display('9')" onkeydown="myFunction(event)">9</button>
+                <button class="spcbtn" onclick="display('*')" onkeydown="myFunction(event)">*</button>
             </div>
             <div class="buttondiv1">
-                <button>4</button>
-                <button>5</button>
-                <button>6</button>
-                <button class="spcbtn">-</button>
+                <button onclick="display('4')" onkeydown="myFunction(event)">4</button>
+                <button onclick="display('5')" onkeydown="myFunction(event)">5</button>
+                <button onclick="display('6')" onkeydown="myFunction(event)">6</button>
+                <button class="spcbtn" onclick="display('-')" onkeydown="myFunction(event)">-</button>
             </div>
             <div class="buttondiv1">
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button class="spcbtn">+</button>
+                <button onclick="display('1')" onkeydown="myFunction(event)">1</button>
+                <button onclick="display('2')" onkeydown="myFunction(event)">2</button>
+                <button onclick="display('3')" onkeydown="myFunction(event)">3</button>
+                <button class="spcbtn" onclick="display('+')" onkeydown="myFunction(event)">+</button>
             </div>
             <div class="buttondiv1">
-                <button>(-)</button>
-                <button>0</button>
-                <button>,</button>
-                <button class="spcbtn">=</button>
+                <button onclick="display('-')" onkeydown="myFunction(event)">(-)</button>
+                <button onclick="display('0')" onkeydown="myFunction(event)">0</button>
+                <button onclick="display(',')" onkeydown="myFunction(event)">,</button>
+                <button class="spcbtn" onclick="finalResult()">=</button>
             </div>
 
         </section>
     </div>
+
+
+    <script src="calc.js"></script>
 </body>
 </html>
+
